@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>My Website</title>
+<link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav-left">
+                <img src="logo.jpg">
+            </div>
+
+            <div class="nav-right">
+                <button href="#">Home</button>
+                <button href="profile">Our Profile</button>
+                <button href="#">Achievement</button>
+                <button href="#">Message Us</button>
+            </div>
+        </nav>
+
+        <header>
+            <h1>Hi <span id="name"></span>, Welcome To Website</h1>
+            <p>Ini adalah latihan pertama</p>
+        </header>
+
+        <script>
+            var name = prompt ("masukkan nama kamu");
+            document.getElementById("name").innerText = name;
+        </script>
+
+        <main>
+            <h2>Our Facilitation</h2>
+            <div class="contents-wrapper">
+                <div class="conten-item">
+                    <div class="image-item">
+                        <img class="icon" src="pengajar.png">
+                    </div>
+                    <div class="text-item">
+                        <p>Teacher</p>
+                    </div>
+                </div>
+
+                <div class="conten-item">
+                    <div class="image-item">
+                        <img class="icon" src="taman.png">
+                    </div>
+                    <div class="text-item">
+                        <p>Sport Field</p>
+                    </div>
+                </div>
+
+                <div class="conten-item">
+                    <div class="image-item">
+                        <img class="icon" src="kelas.png">
+                    </div>
+                    <div class="text-item">
+                        <p>Classroom</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <messages-container>
+            <h2>Messages Us</h2>
+
+            <div class="tabel-wrapper">
+                <form class="message-form" name="message-form" onsubmit="return validateForm()">
+                <span id="isian">Nama: </span><input placeholder="Nama" type="text"name="full-name"/>
+                <br />
+                <span id="isian">Tanggal Lahir:</span> <input type="date" name="birth-date" />
+                <br />
+                <span id="isian">Jenis Kelamin: </span> <input type="radio" id="male" name="gender" value="Laki-laki" /> <label for="male">Laki-laki</label> 
+                <input type="radio" id="female" name="gender" value="Perempuan" /> <label for="female">Perempuan</label> 
+                <br />
+                <span id="isian">Pesan: </span> <textarea placeholder="pesan" name="messages"></textarea>
+                <br />
+                <button type="submit" value="submit">Kirim</button>
+                </form>
+            </div>
+
+            <script>
+                function validateForm () {
+                    var name = document.forms ["message-form"]["full-name"].value;
+                    var date = document.forms ["message-form"]["birth-date"].value;
+                    var gender = document.forms ["message-form"]["gender"].value;
+                    var messages = document.forms ["message-form"]["messages"].value;
+
+                    if (name == "" || date == "" || gender == "" || messages == "") {alert("Input tidak boleh kosong");
+                return false;
+                }
+
+                document.getElementById("sender-full-name").innerText = name;
+                document.getElementById("sender-birth-date").innerText = date;
+                document.getElementById("sender-gender").innerText = gender;
+                docment.getElementById("sender-messages").innerText = messages;
+                return false;
+                }
+            </script>
+
+            <div class="box-wrapper">
+                <p>Nama: <span id="sender-full-name"></span></p>
+                <p>Tanggal Lahir: <span id="sender-birth-date"></span></p>
+                <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+                <p>Pesan: <span id="sender-messages"></span></p>
+            </div>
+        </messages-container>
+        <div class="footer-container">
+            <p>Created By RevoU</p>
+        </div>
+    </body>
+</html>
