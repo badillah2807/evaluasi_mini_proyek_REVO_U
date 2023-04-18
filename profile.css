@@ -34,22 +34,29 @@ img {
 
 main {
     background-color: blueviolet;
-    width: 1375px;
+    width: 1366px;
     height: 600px;
-    margin-top: -4px;
-    margin-left: -15px;
-    display: flex;
-    flex-direction: row;
+    margin-top: -20px;
+    margin-left: -5px;
 }
 
-main h2, main p {
-    margin-left: 15px;
+.main-container {
+    margin-left: 25px;
     position: relative;
 }
 
+.main-container p {
+    margin-top: -10px;
+}
+.form-and-tabel-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 55px;
+}
+
 .form-wrapper {
-    margin-top: 40px;
     margin-left: 15px;
+    margin-right: 50px;
     display: flex;
     flex-direction: row;
 }
@@ -63,7 +70,7 @@ footer {
     flex-direction: row;
     justify-content: end;
     background-color: cyan;
-    width: 1366px;
+    width: 1377px;
     height: 70px;
     margin-left: -15px;
 }

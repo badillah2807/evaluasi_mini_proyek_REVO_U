@@ -13,7 +13,7 @@
 
             <div class="nav-right">
                 <button href="#">Home</button>
-                <button href="profile">Our Profile</button>
+                <button href="profile.html">Our Profile</button>
                 <button href="#">Achievement</button>
                 <button href="#">Message Us</button>
             </div>
