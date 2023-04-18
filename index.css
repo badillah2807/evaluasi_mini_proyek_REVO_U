@@ -34,7 +34,10 @@ img {
     padding: 8px 16px;
     cursor: pointer;
     transition: all 0.5s background-color ease-out;
+}
 
+a {
+    text-decoration: none;
 }
 
 .nav-right button:hover {
@@ -50,8 +53,14 @@ header {
     padding-top: 15px;
 }
 
-.header h1 {
+.header1 {
     font-weight: normal;
+}
+
+.img-slideshow {
+    
+    width: 1000px;
+    height: 350px;
 }
 
 
@@ -172,7 +181,7 @@ button[type=submit] {
 .footer-container {
     width: 1445px;
     height: 60px;
-    background-color: rgb(221, 133, 133);
+    background-color: rgb(229, 252, 98);
 }
 
 .footer-container p {
@@ -203,15 +212,30 @@ button[type=submit] {
     header {
         width: 96.7%;
         font-size: 10px;
+        height: 400px;
         display: flex;
         flex-direction: column;
         margin-left: 0px;
         padding-left: 10px;
         padding-top: 200px;
     }
-    .header h1 {
+
+    .header1 {
+        font-weight: normal;
+    }
+
+    .slider {
+        display: flex;
+        flex-direction: column;
         align-items: center;
     }
+
+    .img-slideshow {
+        width: 300px;
+        height: 200px;
+    }
+
+
     main {
         display: flex;
         align-items: center;

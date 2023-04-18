@@ -26,14 +26,24 @@ img {
 }
 
 .header-right {
-    background-color: aqua;
+    display: flex;
+    margin-right: 10px;
+}
+
+.header-right button {
+    background-color: white;
+    border: 1px solid grey;
     padding: 8px 16px;
     cursor: pointer;
-    transition: all 0.5s background-color ease-out
+    transition: all 0.5s background-color ease-out;
+}
+
+a {
+    text-decoration: none;
 }
 
 main {
-    background-color: blueviolet;
+    background-color: rgb(185, 130, 236);
     width: 1366px;
     height: 600px;
     margin-top: -20px;
@@ -41,6 +51,8 @@ main {
 }
 
 .main-container {
+    margin-top: 20px;
+    padding-top: 10px;
     margin-left: 25px;
     position: relative;
 }
@@ -104,8 +116,8 @@ input[type=radio] {
 
 textarea {
     margin-top: 20px;
-    padding-left: 20px;
-    padding-right: 95px;
+    width: 278px;
+    height: 52px;
 
 }
 
@@ -130,22 +142,22 @@ footer p {
 @media only screen and (max-width: 900px) {
     header {
         width: 100%;
+        height: 210px;
         display: flex;
         flex-direction: column;
     }
 
     img {
-        display: flex;
-        align-items: center;
-            width: 30px;
-            height:30px;
+        width: 30px;
+        height:30px;
+        margin-bottom: 5px;
     }
 
     .header-right {
         width: 100%;
-        display: flex;
         flex-direction: column;
-        margin-top: -5px;
+        margin-bottom: 40px;
+        margin-left: 8px;
     }
 
     main {
@@ -173,7 +185,12 @@ footer p {
         margin-bottom: 30px;
 
     }
-    
+
+    textarea {
+        width: 281px;
+        height: 37px;
+    }
+        
     .tabel-wrapper {
         width: auto;
     }

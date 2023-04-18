@@ -8,25 +8,57 @@
     <body>
         <nav>
             <div class="nav-left">
-                <img src="logo.jpg">
+                <img src="REVOU Logo.png">
             </div>
 
             <div class="nav-right">
-                <button href="#">Home</button>
-                <button href="profile.html">Our Profile</button>
-                <button href="#">Achievement</button>
-                <button href="#">Message Us</button>
+                <button><a href="#">Home</a></button>
+                <button><a href="profile.html">Our Profile </a></button>
+                <button><a href="#">Achievement</a></button>
+                <button><a href="#">Message Us</a></button>
             </div>
         </nav>
 
         <header>
-            <h1>Hi <span id="name"></span>, Welcome To Website</h1>
-            <p>Ini adalah latihan pertama</p>
+            <div class="header1">
+                <h1>Hi <span id="name"></span>, Welcome To Website</h1>
+                <p>Ini adalah latihan pertama</p>
+            </div>
+            <div class="slider">
+                <img class="img-slideshow" src="Banner 1.jpg"/>
+                <img class="img-slideshow" src="Banner 2.jpg"/>
+                <img class="img-slideshow" src="Banner 3.jpg"/>
+                <button onclick="plusDivs(-1)">Prevorius</button>
+                <button onclick="plusDivs(1)">Next</button>
+            </div>
         </header>
 
         <script>
             var name = prompt ("masukkan nama kamu");
             document.getElementById("name").innerText = name;
+
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs((slideIndex += n));
+            }
+            function showDivs(n) {
+                var i;
+                var imgList = document.getElementsByClassName('img-slideshow');
+                if (n > imgList.length) slideIndex = 1;
+                else if (n < 1) slideindex = imgList.length;
+
+                for (i = 0; i < imgList.length; i++ ) {
+                    imgList[i].style.display = 'none';
+                }
+
+                imgList[slideIndex -1].style.display = 'block';
+            }
+
+            setInterval(() => {
+               plusDivs(1);
+            }, 2000)
         </script>
 
         <main>
@@ -76,7 +108,7 @@
                 <br />
                 <span id="isian">Pesan: </span> <textarea placeholder="pesan" name="messages"></textarea>
                 <br />
-                <button type="submit" value="submit">Kirim</button>
+                <button type="submit" value="submit">Submit</button>
                 </form>
             </div>
 
@@ -107,7 +139,7 @@
             </div>
         </messages-container>
         <div class="footer-container">
-            <p>Created By RevoU</p>
+            <p>Created By Bisri</p>
         </div>
     </body>
 </html>
